@@ -12,5 +12,6 @@ You don’t need to download files manually — you can build the image directly
 
 ### Build directly from GitHub
 ```bash
-docker build -t my-docker-image https://github.com/<your-username>/Dockerfiles.git
+docker build -t my-docker-image https://github.com/uat-corextech/Dockerfiles.git#main
+
 
