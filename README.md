@@ -1,4 +1,4 @@
-# Dockerfiles
+# Dockerfiles (go image)
 
 This repository contains example Dockerfiles demonstrating basic Docker instructions like:
 
@@ -6,7 +6,17 @@ This repository contains example Dockerfiles demonstrating basic Docker instruct
 - **RUN** → Executes commands inside the image.
 - **COPY** → Copies files into the image.
 - **CMD** → Run command at container startup.
-# Dockerfiles1
+
+
+# Dockerfiles2 (python image)
+
+This repository contains example Dockerfiles demonstrating basic Docker instructions like:
+
+- **FROM** → Defines the base image.
+- **RUN** → Executes commands inside the image.
+- **COPY** → Copies files into the image.
+- **CMD** → Run command at container startup.
+# Dockerfiles1 (c image)
 
 This repository contains example Dockerfiles demonstrating basic Docker instructions like:
 

@@ -1,14 +1,17 @@
 FROM ubuntu:22.04
 
+# Install Go
+RUN apt update && apt install -y golang-go
+
 # Create working directory
-RUN mkdir /app
+RUN mkdir -p /app
 
-# Copy hello.py
-COPY hello.py /app/hello.py
+# Copy Go source file
+COPY hello.go /app/hello.go
 
-# Update & install python3
-RUN apt update && apt install -y python3
+# Build the Go program
+RUN cd /app && go build -o hello ./hello.go
 
-# Run python hello world
-CMD ["python3", "/app/hello.py"]
+# Run the program
+CMD ["/app/hello"]
 
