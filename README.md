@@ -5,6 +5,16 @@ This repository contains example Dockerfiles demonstrating basic Docker instruct
 - **FROM** → Defines the base image.
 - **RUN** → Executes commands inside the image.
 - **COPY** → Copies files into the image.
+- **CMD** → Run command at container startup.
+# Dockerfiles1
+
+This repository contains example Dockerfiles demonstrating basic Docker instructions like:
+
+- **FROM** → Defines the base image.
+- **RUN** → Executes commands inside the image.
+- **COPY** → Copies files into the image.
+
+  
 
 ## How to Use
 
