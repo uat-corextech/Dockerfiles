@@ -1,0 +1,8 @@
+FROM ubuntu:22.04
+RUN mkdir -p /test /tmp/dir2 /tmp/dir3
+COPY Dockerfile /tmp/
+RUN apt update
+RUN apt install gcc -y
+COPY hello.c /test/hello.c
+RUN gcc /test/hello.c -o /test/hello
+CMD ["/test/hello"]

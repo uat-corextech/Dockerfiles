@@ -1,13 +1,14 @@
 FROM ubuntu:22.04
-RUN mkdir -p /tmp/dir1 /tmp/dir2 /tmp/dir3
-<<<<<<< HEAD
-COPY Dockerfile /tmp/
-RUN apt update
-RUN apt install gcc -y
-COPY hello.c /tmp/hello.c
-RUN gcc /tmp/hello.c -o /tmp/hello
 
+# Create working directory
+RUN mkdir /app
 
-=======
-COPY Dockerfile /tmp/ #use to copy
->>>>>>> 49f8dcac553557de8a08e43565edc77e31df28cf
+# Copy hello.py
+COPY hello.py /app/hello.py
+
+# Update & install python3
+RUN apt update && apt install -y python3
+
+# Run python hello world
+CMD ["python3", "/app/hello.py"]
+
