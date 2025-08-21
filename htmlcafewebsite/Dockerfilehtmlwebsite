@@ -1,0 +1,14 @@
+FROM redhat/ubi9
+
+# Install Apache
+RUN dnf update -y && dnf install -y httpd && dnf clean all
+
+# Copy website files into Apache's root dir
+COPY 2137_barista_cafe/ /var/www/html/
+
+# Expose port 80
+EXPOSE 80
+
+# Run Apache in foreground
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
